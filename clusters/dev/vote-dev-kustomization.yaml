@@ -1,3 +1,4 @@
+Flag --validation has been deprecated, this arg is no longer used, all resources are validated using server-side apply dry-run
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
@@ -5,6 +6,8 @@ metadata:
   name: vote-dev
   namespace: flux-system
 spec:
+  dependsOn:
+  - name: redis-dev
   healthChecks:
   - kind: Deployment
     name: vote
