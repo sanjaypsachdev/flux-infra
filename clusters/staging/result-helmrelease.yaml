@@ -8,11 +8,9 @@ spec:
   chart:
     spec:
       chart: ./deploy/charts/result
-      reconcileStrategy: ChartVersion
       sourceRef:
         kind: GitRepository
         name: instavote
-      version: '*'
   interval: 10m0s
   targetNamespace: instavote
 
