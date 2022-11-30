@@ -9,6 +9,8 @@ spec:
   interval: 1h
   ref:
     branch: main
+  secretRef:
+    name: github-instavote
   timeout: 20s
   url: https://github.com/sanjaypsachdev/instavote.git
 
